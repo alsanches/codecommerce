@@ -28,6 +28,8 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('exemplo', 'WelcomeController@exemplo');
+
 
 
 Route::group(['middleware' => ['web']], function () {
