@@ -3,18 +3,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::put('exemplo', 'WelcomeController@exemplo');
-
-
-//Route::match(['get','post'], '/exemplo2', function(){
-//    return 'oi';
-//});
-//
-//Route::any('/exemplo2', function(){
-//    return 'Any'
-//});
-
-
+Route::get('categories', 'CategoriesController@index');
 
 Route::group(['middleware' => ['web']], function () {
     //

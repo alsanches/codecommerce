@@ -13,6 +13,7 @@ class WelcomeController extends Controller
 
     public function __construct(Category $category)
     {
+        $this->middleware('guest');
         $this->categories = $category;
     }
     public function index()
