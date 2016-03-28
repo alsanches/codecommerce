@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+use CodeCommerce\Category;
+
+
 class CategoriesTableSeeder extends Seeder
 {
     /**
@@ -11,10 +14,9 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            'name' => '',
-            'description'=> '',
-            'url'=> '/',
-        ]);
+        DB::table('categories')->truncate();
+
+        factory('CodeCommerce\Category', 10)->create();
+
     }
 }
